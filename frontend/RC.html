@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Chillies Menu</title>
+    <link rel="stylesheet" href="/frontend/RC_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Red Chillies</h1>
+        <div class="menu">
+            <h2>Vegetarian</h2>
+            <table id="vegMenu">
+                <!-- Vegetarian items will be loaded here -->
+            </table>
+
+            <h2>Non-Vegetarian</h2>
+            <table id="nonVegMenu">
+                <!-- Non-vegetarian items will be loaded here -->
+            </table>
+        </div>
+        <div class="cart-button" onclick="showCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+        
+        <div id="cart-modal" class="cart-modal">
+            <div class="cart-container">
+                <h3>Your Cart</h3>
+                <div id="cartItems">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-total">
+                    <strong>Total: </strong><span id="total">₹0</span>
+                </div>
+                <button onclick="placeOrder()" class="order-btn">Place Order</button>
+            </div>
+            <div class="cart-actions">
+                <button onclick="closeCart()" class="secondary-btn">Close</button>
+                <button onclick="placeOrder()" class="primary-btn" id="place-order-btn">Place Order</button>
+            </div>
+            <div id="order-confirmation" class="order-confirmation"></div>
+        </div>
+    </div>
+    
+    <script src="/frontend/js/RC.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - BITS & BITES</title>
+    <link rel="stylesheet" href="/frontend/admin_styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header>
+            <h1>Restaurant Admin Dashboard</h1>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </header>
+
+        <div class="orders-section">
+            <h2>All Orders</h2>
+            <div class="orders-filter">
+                <button onclick="filterOrders('all')" class="filter-btn active">All Orders</button>
+                <button onclick="filterOrders('pending')" class="filter-btn">Pending</button>
+                <button onclick="filterOrders('completed')" class="filter-btn">Completed</button>
+            </div>
+            <div class="orders-table-container">
+                <table id="ordersTable" class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Student Name</th>
+                            <th>Items</th>
+                            <th>Total Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTableBody">
+                        <!-- Orders will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Menu Management Section -->
+        <div class="section">
+            <h2>Menu Management</h2>
+            <button onclick="showAddItemForm()" class="add-btn">Add New Item</button>
+            <div id="menuItems" class="menu-grid"></div>
+        </div>
+    </div>
+
+    <!-- Add Item Modal -->
+    <div id="addItemModal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Menu Item</h2>
+            <form id="addItemForm" onsubmit="addMenuItem(event)">
+                <input type="text" id="itemName" placeholder="Item Name" required>
+                <input type="number" id="itemPrice" placeholder="Price" required>
+                <select id="itemCategory" required>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Non-Vegetarian">Non-Vegetarian</option>
+                </select>
+                <div class="form-buttons">
+                    <button type="submit" class="submit-btn">Add Item</button>
+                    <button type="button" onclick="closeModal()" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/frontend/js/admin_script.js"></script>
+</body>
+</html>
+
+
