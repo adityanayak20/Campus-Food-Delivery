@@ -14,4 +14,4 @@ connection.connect((err) => {
     }
     console.log('Successfully connected to MySQL!');
     connection.end();
-}); 
+});

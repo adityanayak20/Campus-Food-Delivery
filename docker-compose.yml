@@ -33,4 +33,3 @@ services:
       retries: 10
     volumes:
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
-

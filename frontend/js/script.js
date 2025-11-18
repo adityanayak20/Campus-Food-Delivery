@@ -104,4 +104,3 @@ async function loginDelivery(event) {
 document.addEventListener('DOMContentLoaded', () => {
   showTab('login');
 });
-

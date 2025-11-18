@@ -109,5 +109,3 @@ CREATE TABLE IF NOT EXISTS Admin (
 INSERT INTO Admin (Username, Password, Outlet_ID)
 VALUES ('admin1', 'admin123', 1)
 ON CONFLICT (Username) DO NOTHING;
-
-

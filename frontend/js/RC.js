@@ -138,4 +138,3 @@ async function placeOrder() {
     alert('Error placing order');
   }
 }
-

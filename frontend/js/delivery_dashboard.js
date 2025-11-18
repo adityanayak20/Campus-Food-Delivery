@@ -30,4 +30,3 @@ async function loadOrders() {
 }
 
 document.addEventListener('DOMContentLoaded', loadOrders);
-

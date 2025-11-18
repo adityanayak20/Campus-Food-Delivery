@@ -167,4 +167,3 @@ function logout() {
 
 loadDashboard();
 setInterval(loadOrders, 30000);
-

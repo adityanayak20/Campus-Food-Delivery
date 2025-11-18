@@ -11,5 +11,3 @@ echo "Building and starting Campus Food Delivery stack with Docker Compose..."
 docker compose down --remove-orphans || true
 docker compose build
 docker compose up
-
-
